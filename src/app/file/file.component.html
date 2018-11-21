@@ -1,0 +1,26 @@
+<div class="file" [innerHTML]="text" (textSelect)="renderRectangles( $event )">
+</div>
+<div
+    *ngIf="viewportRectangle"
+    class="indicator"
+    [style.left.px]="viewportRectangle.left - 90"
+    [style.top.px]="viewportRectangle.top - 25"
+    [style.width.px]="200"
+    [style.height.px]="22"
+    (mousedown)="$event.preventDefault()"
+    (mouseup)="$event.stopPropagation(); findSynonim()">
+ 
+    <div class="indicator__cta">
+        <a class="indicator__cta-link">
+            Find Synonims
+        </a>
+    </div> 
+</div>
+<div *ngIf="showSynonymCard"
+     class="synonim-card"
+     [style.left.px]="viewportRectangle.left"
+     [style.top.px]="viewportRectangle.top">
+    <div *ngFor="let item of synonyms" class="synonim-card-body">
+        <p (click)="changeWord(item.word)">{{item.word}}</p>
+    </div>
+</div>

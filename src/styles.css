@@ -1,0 +1,84 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+}
+
+span.underline {
+  text-decoration: underline !important;
+}
+
+span.bold {
+  font-weight: bold !important;
+}
+
+span.italic {
+  font-style: italic !important;
+}
+
+.indicator {
+	position: absolute ;
+	z-index: 2 ;
+	background-color: black;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+.indicator __cta {
+	top: -20px ;
+	left: 50% ;
+	position: absolute ;
+}
+
+.indicator __cta-link {
+	background-color: #333333 ;
+	border-radius: 5px 5px 5px 5px ;
+	bottom: 0px ;
+	box-shadow: 2px 2px 5px fade( #000000, 30% ) ;
+	color: #FFFFFF ;
+	cursor: pointer ;
+	left: 0px ;
+	padding: 11px 22px 10px 22px ;
+	position: absolute ;
+	transform: translateX( -50% ) ;
+	white-space: nowrap ;
+}
+.indicator:after {
+	bottom: -11px ;
+	font-size: 15px ;
+	left: 50% ;
+	line-height: 15px ;
+	content: "▼" ;
+	color: #333333 ;
+	position: absolute ;
+	transform: translateX( -50% ) ;
+}
+.synonim-card {
+	background-color: #f1f0f0; 
+	position: absolute; 
+	z-index: 2; 
+	color: black; 
+	width: 200px; 
+	height: 200px;
+	overflow: auto;
+	text-align: center;
+}
+.synonim-card-body p {
+	padding: 10px 0;
+	margin: 0;
+}
+.synonim-card-body p:hover {
+	background-color: rgb(125, 212, 254);
+	color: #f1f0f0;
+	border-radius: 10px;
+}
